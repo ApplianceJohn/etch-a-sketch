@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.box {
+    border: small solid #222222;
+    margin: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 200;
+    color: silver;
+}
+
+.button {
+    border: 1px solid #222222;
+    border-radius: 5px;
+    padding: 3px;
+    background-color: #222222;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    color: silver;
+}
+
+.container {
+    border: medium solid black;
+    margin: 10px;
+    width: 50vw;
+    height: 50vw;
+}
+
+.shadow {
+    box-shadow: 0px 2px 5px #a5a5a5;
+}
+
+.square {
+    display: inline-block;
+}
