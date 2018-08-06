@@ -3,6 +3,10 @@
     padding: 0;
 }
 
+br {
+    line-height: 0%;
+}
+
 .box {
     border: small solid #222222;
     margin: 10px;
@@ -23,6 +27,8 @@
 
 .container {
     border: medium solid black;
+    display: inline-block;
+    font-size: 0pt;
     margin: 10px;
     width: 50vw;
     height: 50vw;
