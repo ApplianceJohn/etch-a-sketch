@@ -1,14 +1,19 @@
 const grid = document.getElementById("grid");
 
-var gridSize = 64;
+var gridSize = 32;
 
 function draw(e) {
-    this.style.backgroundColor = "black";
+    if (pressed) {
+        this.style.zIndex = "10";
+        this.style.position = "relative";
+        this.style.backgroundColor = "#EEEEEE";
+        this.style.boxShadow = "0 0 7px 5px rgba(230, 230, 230, 0.4)";
+    }
 }
 
 function redraw(e) {
-    var input = parseInt(document.getElementById("insert").value);
-    
+    var input = parseInt(prompt("Enter a new grid size:"));
+
     if (isNaN(input)) {
         alert("Input must be a valid number!");
         return;
@@ -30,12 +35,21 @@ function generator() {
             d.className = "square";
             d.style.width = `calc(100% / ${gridSize})`;
             d.style.height = `calc(100% / ${gridSize})`;
+            d.style.backgroundColor = "black";
             grid.appendChild(d);
         }
         var br = document.createElement('br');
         grid.appendChild(br);
     }
 
+}
+
+var pressed = 0;
+document.body.onmousedown = function () {
+    ++pressed;
+}
+document.body.onmouseup = function () {
+    --pressed;
 }
 
 var button = document.getElementById("butt");
